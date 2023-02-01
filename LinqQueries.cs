@@ -23,6 +23,7 @@ public class LinqQueries
         return librosCollection;
     }
 
+    #region OPERADOR WHERE
     public IEnumerable<Book> librosdepuesdel2009()
     {
         // Entenxion method
@@ -40,4 +41,20 @@ public class LinqQueries
         // Query expresion
         // return from b in librosCollection where b.PageCount > 250 && b.Title.Contains("in Action") select b;
     }
+    #endregion
+
+    #region OPERADORES ALL y ANY
+    public bool TodosLosLibrosTienenStatus()
+    {
+        return librosCollection.All(b => b.Status!= string.Empty);
+    }
+
+
+
+
+    #endregion
+
+
+
+
 }

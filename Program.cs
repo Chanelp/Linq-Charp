@@ -2,7 +2,9 @@
 
 LinqQueries queries = new LinqQueries();
 
-ImprimirValores(queries.Libros250pagsTituloInAction());
+Console.WriteLine(queries.TodosLosLibrosTienenStatus());
+
+//ImprimirValores(queries.Libros250pagsTituloInAction());
 //ImprimirValores(queries.librosdepuesdel2009());
 // ImprimirValores(queries.TodaLaColeccion());
 
