@@ -2,7 +2,8 @@
 
 LinqQueries queries = new LinqQueries();
 
-ImprimirValores(queries.TodaLaColeccion());
+ImprimirValores(queries.librosdepuesdel2009());
+// ImprimirValores(queries.TodaLaColeccion());
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {

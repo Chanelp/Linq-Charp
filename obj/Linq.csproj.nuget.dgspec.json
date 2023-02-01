@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\IntroCSharp\\Linq\\Linq.csproj": {}
+    "D:\\IntroCSharp\\Linq\\Linq.csproj": {}
   },
   "projects": {
-    "d:\\IntroCSharp\\Linq\\Linq.csproj": {
+    "D:\\IntroCSharp\\Linq\\Linq.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\IntroCSharp\\Linq\\Linq.csproj",
+        "projectUniqueName": "D:\\IntroCSharp\\Linq\\Linq.csproj",
         "projectName": "Linq",
-        "projectPath": "d:\\IntroCSharp\\Linq\\Linq.csproj",
+        "projectPath": "D:\\IntroCSharp\\Linq\\Linq.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "d:\\IntroCSharp\\Linq\\obj\\",
+        "outputPath": "D:\\IntroCSharp\\Linq\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
