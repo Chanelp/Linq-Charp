@@ -26,9 +26,14 @@ public class LinqQueries
     public IEnumerable<Book> librosdepuesdel2009()
     {
         // Entenxion method
-        // return librosCollection.Where(b => b.PublishedDate.Year > 2009);
+        return librosCollection.Where(b => b.PublishedDate.Year > 2009);
 
         // Query expresion
-        return from book in librosCollection where book.PublishedDate.Year > 2009 select book; 
+        // return from book in librosCollection where book.PublishedDate.Year > 2009 select book; 
+    }
+
+    public IEnumerable<Book> Libros250pagsTituloInAction()
+    {
+        return librosCollection.Where(b => b.PageCount > 250 && b.Title.Contains("in Action"));
     }
 }
