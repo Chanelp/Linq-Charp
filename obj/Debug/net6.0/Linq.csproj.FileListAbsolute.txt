@@ -1,0 +1,15 @@
+D:\IntroCSharp\Linq\bin\Debug\net6.0\Linq.exe
+D:\IntroCSharp\Linq\bin\Debug\net6.0\Linq.deps.json
+D:\IntroCSharp\Linq\bin\Debug\net6.0\Linq.runtimeconfig.json
+D:\IntroCSharp\Linq\bin\Debug\net6.0\Linq.dll
+D:\IntroCSharp\Linq\bin\Debug\net6.0\Linq.pdb
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.csproj.AssemblyReference.cache
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.GeneratedMSBuildEditorConfig.editorconfig
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.AssemblyInfoInputs.cache
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.AssemblyInfo.cs
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.csproj.CoreCompileInputs.cache
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.dll
+D:\IntroCSharp\Linq\obj\Debug\net6.0\refint\Linq.dll
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.pdb
+D:\IntroCSharp\Linq\obj\Debug\net6.0\Linq.genruntimeconfig.cache
+D:\IntroCSharp\Linq\obj\Debug\net6.0\ref\Linq.dll
