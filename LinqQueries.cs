@@ -34,6 +34,10 @@ public class LinqQueries
 
     public IEnumerable<Book> Libros250pagsTituloInAction()
     {
+        // Extension method
         return librosCollection.Where(b => b.PageCount > 250 && b.Title.Contains("in Action"));
+
+        // Query expresion
+        // return from b in librosCollection where b.PageCount > 250 && b.Title.Contains("in Action") select b;
     }
 }
