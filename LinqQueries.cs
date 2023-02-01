@@ -58,10 +58,17 @@ public class LinqQueries
     #region OPERADOR CONTAINS
     public IEnumerable<Book> LibrosDePython()
     {
+        // Extension method
         return librosCollection.Where(b => b.Categories.Contains("Python"));
+
+        // Query expresion
+        // return from book in librosCollection where book.Categories.Contains("Python") select book;
     }
     #endregion
 
+    #region 
+
+    #endregion
 
 
 }

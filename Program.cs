@@ -2,6 +2,7 @@
 
 LinqQueries queries = new LinqQueries();
 
+
 ImprimirValores(queries.LibrosDePython());
 
 //Console.WriteLine($"¿Algún libro fue publicado en 2005? {queries.HayLibroPublicadoEn2005()}");
