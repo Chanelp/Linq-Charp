@@ -66,7 +66,11 @@ public class LinqQueries
     }
     #endregion
 
-    #region 
+    #region OPERADORES OrderBy y OrderByDescending
+    public IEnumerable<Book> LibrosDeCategoriaAsc(string categoria)
+    {
+        return librosCollection.Where(b => b.Categories.Contains(categoria)).OrderBy(b => b.Title);
+    }
 
     #endregion
 

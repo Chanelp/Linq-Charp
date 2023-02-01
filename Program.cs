@@ -2,8 +2,9 @@
 
 LinqQueries queries = new LinqQueries();
 
-
-ImprimirValores(queries.LibrosDePython());
+// Libros por categoría
+ImprimirValores(queries.LibrosDeCategoriaAsc("Java"));
+//ImprimirValores(queries.LibrosDePython());
 
 //Console.WriteLine($"¿Algún libro fue publicado en 2005? {queries.HayLibroPublicadoEn2005()}");
 //Console.WriteLine($"¿Todos los libros tienen status? {queries.TodosLosLibrosTienenStatus()}");
