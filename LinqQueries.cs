@@ -53,12 +53,14 @@ public class LinqQueries
     {
         return librosCollection.Any(b => b.PublishedDate.Year == 2005);
     }
-
-
-
-
     #endregion
 
+    #region OPERADOR CONTAINS
+    public IEnumerable<Book> LibrosDePython()
+    {
+        return librosCollection.Where(b => b.Categories.Contains("Python"));
+    }
+    #endregion
 
 
 
