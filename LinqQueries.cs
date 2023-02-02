@@ -13,7 +13,7 @@ public class LinqQueries
             string json = reader.ReadToEnd();
 
             // Transformar la colección de json a tipo List<Book>
-            this.librosCollection = System.Text.Json.JsonSerializer.Deserialize<List<Book>>(json, new System.Text.Json.JsonSerializerOptions() { PropertyNameCaseInsensitive = true })?? Enumerable.Empty<Book>().ToList();
+            this.librosCollection = System.Text.Json.JsonSerializer.Deserialize<List<Book>>(json, new System.Text.Json.JsonSerializerOptions() { PropertyNameCaseInsensitive = true }) ?? Enumerable.Empty<Book>().ToList();
         }
     }
 
@@ -46,7 +46,7 @@ public class LinqQueries
     #region OPERADORES ALL y ANY
     public bool TodosLosLibrosTienenStatus()
     {
-        return librosCollection.All(b => b.Status!= string.Empty);
+        return librosCollection.All(b => b.Status != string.Empty);
     }
 
     public bool HayLibroPublicadoEn2005()
@@ -103,7 +103,7 @@ public class LinqQueries
     public IEnumerable<Book> TresPrimerosLibros()
     {
         return librosCollection.Take(3)
-        .Select(b => new Book() { Title = b.Title, PageCount = b.PageCount});
+        .Select(b => new Book() { Title = b.Title, PageCount = b.PageCount });
     }
     #endregion
 
@@ -150,6 +150,22 @@ public class LinqQueries
     public int SumaPaginasLibroEntre0y500()
     {
         return librosCollection.Where(b => b.PageCount >= 0 && b.PageCount <= 500).Sum(b => b.PageCount);
+    }
+
+    public string TitulosLibrosDespues2015Concatenados()
+    {
+        return librosCollection
+                .Where(b => b.PublishedDate.Year > 2015)
+                // El "" es el valor semilla, nombre de lo que se acumula y next que irá guardando los valores de la colección filtrada
+                .Aggregate("", (TitulosLibros, next) =>
+                {
+                    if (TitulosLibros != string.Empty)
+                        TitulosLibros += " || " + next.Title;
+                    else
+                        TitulosLibros += next.Title;
+
+                    return TitulosLibros;
+                });
     }
     #endregion
 }

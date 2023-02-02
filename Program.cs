@@ -4,8 +4,11 @@ LinqQueries queries = new LinqQueries();
 
 #region EJECUCION DE METODOS
 
+//AGGREGATE
+Console.WriteLine(queries.TitulosLibrosDespues2015Concatenados());
+
 //SUM DE PAGINA DE LIBROS ENTRE 0 y 500
-Console.WriteLine($"Suma total de páginas: {queries.SumaPaginasLibroEntre0y500()}");
+//Console.WriteLine($"Suma total de páginas: {queries.SumaPaginasLibroEntre0y500()}");
 
 // Libro con menor numero de paginas - MinBy y MaxBy
 // var libroMenorPag = queries.LibroConMenorNumeroPaginas();
