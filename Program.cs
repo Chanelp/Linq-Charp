@@ -2,8 +2,11 @@
 
 LinqQueries queries = new LinqQueries();
 
+// Selección dinámica 3 primeros libros
+ImprimirValores(queries.TresPrimerosLibros());
+
 //Tercer y cuarto libro de más de x # paginas
-ImprimirValores(queries.TerceryCuartoLibroMas400PAg(400));
+//ImprimirValores(queries.TerceryCuartoLibroMas400PAg(400));
 
 // Operador Take
 //ImprimirValores(queries.RetoOperadorTake("Java", 3));

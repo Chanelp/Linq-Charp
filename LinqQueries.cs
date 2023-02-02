@@ -99,6 +99,15 @@ public class LinqQueries
 
     #endregion
 
+    #region SELECCIÓN DINÁMICA
+    public IEnumerable<Book> TresPrimerosLibros()
+    {
+        return librosCollection.Take(3)
+        .Select(b => new Book() { Title = b.Title, PageCount = b.PageCount});
+    }
+    #endregion
+
+
 
 
 }
