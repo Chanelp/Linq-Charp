@@ -2,8 +2,12 @@
 
 LinqQueries queries = new LinqQueries();
 
+#region EJECUCION DE METODOS
+//COUNT
+Console.WriteLine($"Cantidad de libros que tienen entre 200 y 500 pag: {queries.CantidadLibrosEntre200y500Pag()}");
+
 // Selección dinámica 3 primeros libros
-ImprimirValores(queries.TresPrimerosLibros());
+//ImprimirValores(queries.TresPrimerosLibros());
 
 //Tercer y cuarto libro de más de x # paginas
 //ImprimirValores(queries.TerceryCuartoLibroMas400PAg(400));
@@ -24,6 +28,8 @@ ImprimirValores(queries.TresPrimerosLibros());
 //ImprimirValores(queries.Libros250pagsTituloInAction());
 //ImprimirValores(queries.librosdepuesdel2009());
 // ImprimirValores(queries.TodaLaColeccion());
+
+#endregion
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
