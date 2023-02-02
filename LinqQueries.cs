@@ -88,6 +88,15 @@ public class LinqQueries
         .TakeLast(cuantos);
     }
 
+    // Select therd and quarth book that have more than 400 pages
+    public IEnumerable<Book> TerceryCuartoLibroMas400PAg(int nPages)
+    {
+        return librosCollection
+        .Where(b => b.PageCount > nPages)
+        .Take(4)
+        .Skip(2);
+    }
+
     #endregion
 
 

@@ -2,8 +2,11 @@
 
 LinqQueries queries = new LinqQueries();
 
+//Tercer y cuarto libro de más de x # paginas
+ImprimirValores(queries.TerceryCuartoLibroMas400PAg(400));
+
 // Operador Take
-ImprimirValores(queries.RetoOperadorTake("Java", 3));
+//ImprimirValores(queries.RetoOperadorTake("Java", 3));
 
 // Libros más de x cantidad de páginas y ordenados de forma descendente por # de pags
 //ImprimirValores(queries.LibrosNumeroPaginasDesc(450));
