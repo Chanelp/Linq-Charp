@@ -134,12 +134,12 @@ public class LinqQueries
 
     #region OPERADORES MinBy y MaxBy
 
-    public Book LibroConMenorNumeroPaginas()
+    public Book? LibroConMenorNumeroPaginas()
     {
         return librosCollection.Where(b => b.PageCount > 0).MinBy(b => b.PageCount);
     }
 
-    public Book LibroFechaPublicReciente()
+    public Book? LibroFechaPublicReciente()
     {
         return librosCollection.MaxBy(b => b.PublishedDate);
     }
