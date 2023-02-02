@@ -145,5 +145,11 @@ public class LinqQueries
     }
     #endregion
 
+    #region SUM y AGGREGATE
 
+    public int SumaPaginasLibroEntre0y500()
+    {
+        return librosCollection.Where(b => b.PageCount >= 0 && b.PageCount <= 500).Sum(b => b.PageCount);
+    }
+    #endregion
 }

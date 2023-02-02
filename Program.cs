@@ -4,16 +4,18 @@ LinqQueries queries = new LinqQueries();
 
 #region EJECUCION DE METODOS
 
-// Libro con menor numero de paginas
+//SUM DE PAGINA DE LIBROS ENTRE 0 y 500
+Console.WriteLine($"Suma total de páginas: {queries.SumaPaginasLibroEntre0y500()}");
+
+// Libro con menor numero de paginas - MinBy y MaxBy
 // var libroMenorPag = queries.LibroConMenorNumeroPaginas();
 // Console.WriteLine($"{libroMenorPag.Title} - {libroMenorPag.PageCount}");
-
-var libroFechaReciente = queries.LibroFechaPublicReciente();
-Console.WriteLine($"{libroFechaReciente.Title} - {libroFechaReciente.PublishedDate.ToShortDateString()}");
+// var libroFechaReciente = queries.LibroFechaPublicReciente();
+// Console.WriteLine($"{libroFechaReciente.Title} - {libroFechaReciente.PublishedDate.ToShortDateString()}");
 
 // Min y Max
-//System.Console.WriteLine($"El libro con mayor # de páginas tiene: {queries.CantidadDelLibroMayorPag()} páginas");
-//System.Console.WriteLine($"Fecha de publicación menor {queries.FechaPublicacionMenor()}");
+//Console.WriteLine($"El libro con mayor # de páginas tiene: {queries.CantidadDelLibroMayorPag()} páginas");
+//Console.WriteLine($"Fecha de publicación menor {queries.FechaPublicacionMenor()}");
 
 //COUNT
 //Console.WriteLine($"Cantidad de libros que tienen entre 200 y 500 pag: {queries.CantidadLibrosEntre200y500Pag()}");
