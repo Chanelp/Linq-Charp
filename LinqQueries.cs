@@ -107,7 +107,7 @@ public class LinqQueries
     }
     #endregion
 
-    #region OPERADORES DE AGREGACIÓN
+    #region OPERADORES DE AGREGACIÓN Count y LongCount
     public int CantidadLibrosEntre200y500Pag()
     {
         return librosCollection.Count(b => b.PageCount >= 200 && b.PageCount <= 500);
@@ -118,6 +118,18 @@ public class LinqQueries
         return librosCollection.LongCount(b => b.PageCount >= 200 && b.PageCount <= 500);
     }
     #endregion
+
+    #region OPERADOR Min y Max
+
+    public DateTime FechaPublicacionMenor()
+    {
+        return librosCollection.Min(b => b.PublishedDate);
+    }
+
+
+    #endregion
+
+
 
 
 }

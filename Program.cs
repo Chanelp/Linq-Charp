@@ -3,8 +3,12 @@
 LinqQueries queries = new LinqQueries();
 
 #region EJECUCION DE METODOS
+
+// Min y Max
+System.Console.WriteLine($"Fecha de publicación menor {queries.FechaPublicacionMenor()}");
+
 //COUNT
-Console.WriteLine($"Cantidad de libros que tienen entre 200 y 500 pag: {queries.CantidadLibrosEntre200y500Pag()}");
+//Console.WriteLine($"Cantidad de libros que tienen entre 200 y 500 pag: {queries.CantidadLibrosEntre200y500Pag()}");
 
 // Selección dinámica 3 primeros libros
 //ImprimirValores(queries.TresPrimerosLibros());
