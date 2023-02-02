@@ -72,6 +72,11 @@ public class LinqQueries
         return librosCollection.Where(b => b.Categories.Contains(categoria)).OrderBy(b => b.Title);
     }
 
+    public IEnumerable<Book> LibrosNumeroPaginasDesc(int nPaginas)
+    {
+        return librosCollection.Where(b => b.PageCount > nPaginas).OrderByDescending(b => b.PageCount);
+    }
+
     #endregion
 
 

@@ -2,8 +2,11 @@
 
 LinqQueries queries = new LinqQueries();
 
+// Libros más de x cantidad de páginas y ordenados de forma descendente por # de pags
+ImprimirValores(queries.LibrosNumeroPaginasDesc(450));
+
 // Libros por categoría
-ImprimirValores(queries.LibrosDeCategoriaAsc("Java"));
+//ImprimirValores(queries.LibrosDeCategoriaAsc("Java"));
 //ImprimirValores(queries.LibrosDePython());
 
 //Console.WriteLine($"¿Algún libro fue publicado en 2005? {queries.HayLibroPublicadoEn2005()}");
