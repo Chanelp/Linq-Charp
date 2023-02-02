@@ -112,6 +112,11 @@ public class LinqQueries
     {
         return librosCollection.Where(b => b.PageCount >= 200 && b.PageCount <= 500).Count();
     }
+
+    public long LongCantidadLibrosEntre200y500Pag()
+    {
+        return librosCollection.Where(b => b.PageCount >= 200 && b.PageCount <= 500).LongCount();
+    }
     #endregion
 
 
