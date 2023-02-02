@@ -138,6 +138,11 @@ public class LinqQueries
     {
         return librosCollection.Where(b => b.PageCount > 0).MinBy(b => b.PageCount);
     }
+
+    public Book LibroFechaPublicReciente()
+    {
+        return librosCollection.MaxBy(b => b.PublishedDate);
+    }
     #endregion
 
 
