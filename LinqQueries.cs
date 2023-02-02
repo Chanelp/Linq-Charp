@@ -110,12 +110,12 @@ public class LinqQueries
     #region OPERADORES DE AGREGACIÓN
     public int CantidadLibrosEntre200y500Pag()
     {
-        return librosCollection.Where(b => b.PageCount >= 200 && b.PageCount <= 500).Count();
+        return librosCollection.Count(b => b.PageCount >= 200 && b.PageCount <= 500);
     }
 
     public long LongCantidadLibrosEntre200y500Pag()
     {
-        return librosCollection.Where(b => b.PageCount >= 200 && b.PageCount <= 500).LongCount();
+        return librosCollection.LongCount(b => b.PageCount >= 200 && b.PageCount <= 500);
     }
     #endregion
 
