@@ -81,7 +81,11 @@ public class LinqQueries
     #region  OPERADORES TAKE Y Skip
     public IEnumerable<Book> RetoOperadorTake(string categoria, int cuantos)
     {
-        return librosCollection.Where(book => book.Categories.Contains(categoria)).OrderByDescending(b => b.PublishedDate).Take(cuantos);
+        return librosCollection
+        .Where(book => book.Categories
+        .Contains(categoria))
+        .OrderByDescending(b => b.PublishedDate)
+        .Take(cuantos);
     }
 
     #endregion
