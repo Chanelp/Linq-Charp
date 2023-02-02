@@ -120,7 +120,6 @@ public class LinqQueries
     #endregion
 
     #region OPERADOR Min y Max
-
     public DateTime FechaPublicacionMenor()
     {
         return librosCollection.Min(b => b.PublishedDate);
@@ -131,10 +130,15 @@ public class LinqQueries
         return librosCollection.Max(b => b.PageCount);
     }
 
-
     #endregion
 
+    #region OPERADORES MinBy y MaxBy
 
+    public Book LibroConMenorNumeroPaginas()
+    {
+        return librosCollection.Where(b => b.PageCount > 0).MinBy(b => b.PageCount);
+    }
+    #endregion
 
 
 }
