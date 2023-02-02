@@ -4,8 +4,12 @@ LinqQueries queries = new LinqQueries();
 
 #region EJECUCION DE METODOS
 
+// FUNC
+var titulos = queries.TitulosSeparadosPorGuion(x => x.PublishedDate.Year > 2005 && x.Title != string.Empty);
+System.Console.WriteLine(titulos);
+
 //AGGREGATE
-Console.WriteLine(queries.TitulosLibrosDespues2015Concatenados());
+//Console.WriteLine(queries.TitulosLibrosDespues2015Concatenados());
 
 //SUM DE PAGINA DE LIBROS ENTRE 0 y 500
 //Console.WriteLine($"Suma total de páginas: {queries.SumaPaginasLibroEntre0y500()}");

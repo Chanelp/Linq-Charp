@@ -156,16 +156,14 @@ public class LinqQueries
     {
         return librosCollection
                 .Where(b => b.PublishedDate.Year > 2015)
-                // El "" es el valor semilla, nombre de lo que se acumula y next que irá guardando los valores de la colección filtrada
+                // El "" es el valor inicial del acumulador, (nombre del acumulador y next elemento la colección filtrada), función
                 .Aggregate("", (TitulosLibros, next) =>
                 {
-                    if (TitulosLibros != string.Empty)
-                        TitulosLibros += " || " + next.Title;
-                    else
-                        TitulosLibros += next.Title;
-
-                    return TitulosLibros;
+                    return TitulosLibros.Equals(string.Empty) ? TitulosLibros += next.Title : TitulosLibros += "||" + next.Title;
                 });
     }
+
+    // Con Func
+    public string TitulosSeparadosPorGuion(Func<Book, bool> where) => string.Join(" - ", librosCollection.Where(where).Select(b => b.Title));  
     #endregion
 }
