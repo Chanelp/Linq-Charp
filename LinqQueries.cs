@@ -126,6 +126,11 @@ public class LinqQueries
         return librosCollection.Min(b => b.PublishedDate);
     }
 
+    public int CantidadDelLibroMayorPag()
+    {
+        return librosCollection.Max(b => b.PageCount);
+    }
+
 
     #endregion
 
