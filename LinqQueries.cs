@@ -84,8 +84,8 @@ public class LinqQueries
         return librosCollection
         .Where(book => book.Categories
         .Contains(categoria))
-        .OrderByDescending(b => b.PublishedDate)
-        .Take(cuantos);
+        .OrderBy(b => b.PublishedDate)
+        .TakeLast(cuantos);
     }
 
     #endregion
